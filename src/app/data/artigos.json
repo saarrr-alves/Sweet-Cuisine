@@ -1,7 +1,7 @@
 {
     "receitas": [
         {
-            "id": 1,
+            "slug": "delicioso-bolo-de-chocolate",
             "title": "Delicioso Bolo de Chocolate",
             "description": "Este bolo de chocolate é rico, úmido e perfeito para qualquer ocasião. Feito com cacau em pó de alta qualidade e finalizado com uma ganache de chocolate cremosa.",
             "author": "Jane Doe",
@@ -32,7 +32,7 @@
             ]
         },
         {
-            "id": 2,
+            "slug": "torta-de-maca-classica",
             "title": "Torta de Maçã Clássica",
             "description": "Uma torta de maçã tradicional feita com maçãs frescas, canela e uma massa caseira crocante. Perfeita para sobremesa ou um lanche doce.",
             "author": "John Smith",
@@ -62,7 +62,7 @@
             ]
         },
         {
-            "id": 3,
+            "slug": "bolo-de-limao-com-calda",
             "title": "Bolo de Limão com Calda",
             "description": "Um bolo de limão leve e cítrico que é refrescante e delicioso. Finalizado com uma cobertura de limão picante.",
             "author": "Emily Johnson",
@@ -94,7 +94,7 @@
             ]
         },
         {
-            "id": 4,
+            "slug": "cupcakes-red-velvet",
             "title": "Cupcakes Red Velvet",
             "description": "Estes cupcakes red velvet são macios, úmidos e cobertos com um rico glacê de cream cheese. Perfeitos para festas e celebrações.",
             "author": "Michael Brown",
@@ -130,7 +130,7 @@
             ]
         },
         {
-            "id": 5,
+            "slug": "pao-de-banana-com-nozes",
             "title": "Pão de Banana com Nozes",
             "description": "Um pão de banana úmido e saboroso, repleto de pedaços crocantes de nozes. Perfeito para o café da manhã ou um lanche.",
             "author": "Sarah Lee",
@@ -159,7 +159,7 @@
             ]
         },
         {
-            "id": 6,
+            "slug": "cheesecake-classico",
             "title": "Cheesecake Clássico",
             "description": "Um cheesecake clássico, cremoso e suave, com uma crosta de biscoito amanteigada. Perfeito para qualquer ocasião especial.",
             "author": "David Wilson",

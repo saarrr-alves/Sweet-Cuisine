@@ -4,28 +4,26 @@ import Link from 'next/link';
 import { receitas } from '../../data/artigos.json';
 
 type Props = {
-    params: Promise <{ 
-        id: number 
-    }>;
+    params: {
+        slug: string;
+    };
 }
 
 export async function generateStaticParams() {
     return receitas.map((receita) => ({
-        id: receita.id.toString(),
+        slug: receita.slug, // DEVE ser 'slug' aqui
     }));
 }
 
-async function getReceitaById(id: number) {
-    return receitas.find((r) => r.id == id);
+async function getReceitaBySlug(slug: string) {
+    return receitas.find((receita) => receita.slug == slug);
 }
 
 export const generateMetadata = async ({ params }: Props) => { 
-    const { id } = await params;
+    const { slug } = await params;
+    const details = receitas.find((receita) => receita.slug == slug);
 
-    const details =  receitas.find((receita) => receita.id == id);
-
-    if (!details)
-        return;
+    if (!details) return;
 
     return {
         title: `${details.title} | Receitas Incríveis`,
@@ -33,24 +31,16 @@ export const generateMetadata = async ({ params }: Props) => {
         openGraph: {
             title: `${details.title} | Receitas Incríveis`,
             description: details.description,
-            images: [
-                {
-                    url: details.image,
-                    width: 800,
-                    height: 600,
-                    alt: details.title,
-                },
-            ],
+            images: [{ url: details.image, width: 800, height: 600, alt: details.title }],
             locale: 'pt-BR',
             type: 'article',
         },
     };
 }
 
-const DetalheReceita = async ({params} : Props) => {
-    const { id } = await params;
-
-    const details =  await getReceitaById(id);
+const DetalheReceita = async ({ params }: Props) => {
+    const { slug } = await params;
+    const details = await getReceitaBySlug(slug);
 
     if (!details) return notFound();
 

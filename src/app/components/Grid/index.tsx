@@ -10,7 +10,7 @@ const Grid = ({ receitas }: Props) => {
     return (
         <section className={style.grid}>
             {receitas.map((receita) => (
-                <Card key={receita.id} receita={receita} />
+                <Card key={receita.slug} receita={receita} />
             ))}
         </section>
     );
