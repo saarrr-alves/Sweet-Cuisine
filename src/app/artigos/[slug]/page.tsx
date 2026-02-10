@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import style from './DetalheReceita.module.css';
 import Link from 'next/link';
 import { receitas } from '../../data/artigos.json';
+import Image from 'next/image';
 
 type Props = {
     params: {
@@ -63,7 +64,7 @@ const DetalheReceita = async ({ params }: Props) => {
                 </header>
 
                 <div className={style.imageWrapper}>
-                    <img className={style.image} src={image} alt={title} />
+                    <Image className={style.image} src={image} alt={title} width={800} height={600} />
                 </div>
 
                 <p className={style.description}>{description}</p>
